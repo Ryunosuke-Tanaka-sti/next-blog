@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
+
+const urlPrefix = process.env.URL_PREFIX ? "/" + process.env.URL_PREFIX : "";
+
 const nextConfig = {
   reactStrictMode: true,
-  assetPrefix: process.env.NODE_ENV === "production" ? "/project_name" : "",
+  assetPrefix: urlPrefix,
+  basePath: urlPrefix,
 };
 
 module.exports = nextConfig;
