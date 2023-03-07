@@ -6,6 +6,9 @@ const nextConfig = {
   reactStrictMode: true,
   assetPrefix: urlPrefix,
   basePath: urlPrefix,
+  experimental: {
+    appDir: true,
+  },
 };
 
 module.exports = nextConfig;
