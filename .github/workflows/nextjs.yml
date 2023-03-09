@@ -75,7 +75,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
-          URL_PREFIX: next-blog
+          BRANCH_NAME: ${{env.BRANCH_NAME}}
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
