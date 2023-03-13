@@ -1,23 +1,22 @@
 import styles from "@/styles/Home.module.css";
-import { GetStaticProps } from "next";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
-type Props = {
-  nowDate: string;
-};
+// type Props = {
+//   nowDate: string;
+// };
 
-export const getStaticProps: GetStaticProps<Props> = async (context) => {
-  return {
-    props: {
-      nowDate: new Date().toLocaleString(),
-    },
-    revalidate: 20, // ISR settings
-  };
-};
-export default function Home({ nowDate }: Props) {
+// export const getStaticProps: GetStaticProps<Props> = async (context) => {
+//   return {
+//     props: {
+//       nowDate: new Date().toLocaleString(),
+//     },
+//     revalidate: 20, // ISR settings
+//   };
+// };
+export default function Home() {
   return (
     <>
       <Head>
@@ -30,7 +29,6 @@ export default function Home({ nowDate }: Props) {
         <div className={styles.description}>
           <div>
             Get started by editing&nbsp;
-            {nowDate}
             <div className="text-2xl text-red-800">test</div>
             <code className={styles.code}>src/pages/index.tsx</code>
           </div>
