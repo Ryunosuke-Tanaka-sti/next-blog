@@ -15,11 +15,11 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
-          <p>
+          <div>
             Get started by editing&nbsp;
             <div className="text-2xl text-red-800">test</div>
             <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
+          </div>
           <div>
             <a
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
