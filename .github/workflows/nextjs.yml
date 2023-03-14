@@ -73,15 +73,12 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-        
-      - name: Create Env
-        run: |
-          touch .env
-          echo BRANCH_NAME: ${{ env.BRANCH_NAME }} >> .env
-          echo MICROCMS_APP_KEY: ${{ secrets.MICROCMS_APP_KEY }} >> .env
-          echo MICROCMS_APP_DOMAIN: ${{ secrets.MICROCMS_APP_DOMAIN }} >> .env
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build       
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          BRANCH_NAME: ${{ vars.BRANCH_NAME }}
+          MICROCMS_APP_KEY: ${{ secrets.MICROCMS_APP_KEY }}
+          MICROCMS_APP_DOMAIN: ${{ secrets.MICROCMS_APP_DOMAIN }}
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
