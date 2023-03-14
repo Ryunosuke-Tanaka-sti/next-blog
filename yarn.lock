@@ -763,6 +763,11 @@ eslint-config-next@13.2.3:
     eslint-plugin-react "^7.31.7"
     eslint-plugin-react-hooks "^4.5.0"
 
+eslint-config-prettier@^8.7.0:
+  version "8.7.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.7.0.tgz#f1cc58a8afebc50980bd53475451df146c13182d"
+  integrity sha512-HHVXLSlVUhMSmyW4ZzEuvjpwqamgmlfkutD53cYXLikh4pt/modINRcCIApJ84czDxM4GZInwUrromsDdTImTA==
+
 eslint-import-resolver-node@^0.3.6, eslint-import-resolver-node@^0.3.7:
   version "0.3.7"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.7.tgz#83b375187d412324a1963d84fa664377a23eb4d7"
@@ -860,6 +865,26 @@ eslint-plugin-react@^7.31.7:
     resolve "^2.0.0-next.4"
     semver "^6.3.0"
     string.prototype.matchall "^4.0.8"
+
+eslint-plugin-tailwindcss@^3.10.1:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-tailwindcss/-/eslint-plugin-tailwindcss-3.10.1.tgz#727193f78cc22b9b358ef5f99de2177d173a5209"
+  integrity sha512-NLPZ6b6nd/8CgGNMQ6NDiPUfBLQpSGu/u9RyX3MCZOwzNs2dFt1OamNAiRuo3Ixh7Gv4t5UcAcdNt8z74UDJkA==
+  dependencies:
+    fast-glob "^3.2.5"
+    postcss "^8.4.4"
+
+eslint-plugin-unused-imports@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-unused-imports/-/eslint-plugin-unused-imports-2.0.0.tgz#d8db8c4d0cfa0637a8b51ce3fd7d1b6bc3f08520"
+  integrity sha512-3APeS/tQlTrFa167ThtP0Zm0vctjr4M44HMpeg1P4bK6wItarumq0Ma82xorMKdFsWpphQBlRPzw/pxiVELX1A==
+  dependencies:
+    eslint-rule-composer "^0.3.0"
+
+eslint-rule-composer@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-rule-composer/-/eslint-rule-composer-0.3.0.tgz#79320c927b0c5c0d3d3d2b76c8b4a488f25bbaf9"
+  integrity sha512-bt+Sh8CtDmn2OajxvNO+BX7Wn4CIWMpTRm3MaiKPCQcnnlm0CS2mhui6QaoeQugs+3Kj2ESKEEGJUdVafwhiCg==
 
 eslint-scope@^7.1.1:
   version "7.1.1"
@@ -970,7 +995,7 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
-fast-glob@^3.2.11, fast-glob@^3.2.12, fast-glob@^3.2.9:
+fast-glob@^3.2.11, fast-glob@^3.2.12, fast-glob@^3.2.5, fast-glob@^3.2.9:
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.12.tgz#7f39ec99c2e6ab030337142da9e0c18f37afae80"
   integrity sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==
@@ -1872,7 +1897,7 @@ postcss@8.4.14:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-postcss@^8.0.9, postcss@^8.4.21:
+postcss@^8.0.9, postcss@^8.4.21, postcss@^8.4.4:
   version "8.4.21"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.21.tgz#c639b719a57efc3187b13a1d765675485f4134f4"
   integrity sha512-tP7u/Sn/dVxK2NnruI4H9BG+x+Wxz6oeZ1cJ8P6G/PZY0IKk4k/63TDsQf2kQq3+qoJeLm2kIBUNlZe3zgb4Zg==
@@ -1885,6 +1910,11 @@ prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
+
+prettier@^2.8.4:
+  version "2.8.4"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.4.tgz#34dd2595629bfbb79d344ac4a91ff948694463c3"
+  integrity sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==
 
 prop-types@^15.8.1:
   version "15.8.1"

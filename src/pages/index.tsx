@@ -1,8 +1,9 @@
-import styles from "@/styles/Home.module.css";
-import { Inter } from "next/font/google";
-import Head from "next/head";
+import { Inter } from 'next/font/google';
+import Head from 'next/head';
 
-const inter = Inter({ subsets: ["latin"] });
+import styles from '@/styles/Home.module.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 // type Props = {
 //   nowDate: string;
@@ -29,16 +30,16 @@ export default function Home() {
         <div className={styles.description}>
           <div>
             Get started by editing&nbsp;
-            <div className="text-2xl text-red-800">test</div>
+            <div className="flex text-2xl text-red-800">test</div>
             <code className={styles.code}>src/pages/index.tsx</code>
           </div>
-          <div>
+          <div className="">
             <a
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
             >
-              By{" "}
+              By{' '}
               <img
                 src="./vercel.svg"
                 alt="Vercel Logo"
@@ -121,6 +122,7 @@ export default function Home() {
             </p>
           </a>
         </div>
+        <div className="flex items-center justify-center text-base">text</div>
       </main>
     </>
   );
