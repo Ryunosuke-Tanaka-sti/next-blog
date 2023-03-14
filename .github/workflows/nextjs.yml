@@ -76,6 +76,9 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
           BRANCH_NAME: ${{env.BRANCH_NAME}}
+          MICROCMS_APP_KEY: ${{secrets.MICROCMS_APP_KEY}}
+          MICROCMS_APP_KEY: ${{secrets.MICROCMS_APP_DOMAIN}}
+
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
