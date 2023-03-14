@@ -23,6 +23,23 @@
           "type",
           "index"
         ],
+        "pathGroups": [
+          {
+            "pattern": "@/lib/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/components/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/types/**",
+            "group": "type",
+            "position": "after"
+          }
+        ],
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",
