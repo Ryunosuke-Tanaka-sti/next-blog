@@ -81,6 +81,10 @@ jobs:
           MICROCMS_APP_DOMAIN: ${{ secrets.MICROCMS_APP_DOMAIN }}
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
+        env:
+          BRANCH_NAME: ${{ vars.BRANCH_NAME }}
+          MICROCMS_APP_KEY: ${{ secrets.MICROCMS_APP_KEY }}
+          MICROCMS_APP_DOMAIN: ${{ secrets.MICROCMS_APP_DOMAIN }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
