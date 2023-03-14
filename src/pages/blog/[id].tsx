@@ -26,9 +26,6 @@ export default BlogContentPage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const data = await client.get({ endpoint: 'blogs' });
-  console.log(data);
-  console.log('xxxxxxxxxxxxxxxxxxxxx');
-
   const paths = data.contents.map((content: any) => `/blog/${content.id}`);
   console.log(paths);
 
@@ -38,11 +35,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps: GetStaticProps<Props> = async (context: any) => {
   const id = context.params.id;
-  console.log('xxxxxxxxxxx');
-
-  console.log(id);
-  console.log('xxxxxxxxxxxxxxxx');
-
   const data = await client.get({ endpoint: 'blogs', contentId: id });
   console.log(data as BlogType);
 
