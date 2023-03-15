@@ -11,16 +11,16 @@ type Props = {
 const BlogPage = (props: Props) => {
   const { blog } = props;
   return (
-    <>
-      <ul>
+    <main id="blog">
+      <ul className="flex flex-row items-center">
         {blog.map((value) => (
-          <li key={value.id}>
+          <h1 key={value.id}>
             {value.id} {value.title} {value.publishedAt.toLocaleString()}
             <a href={`blog/${value.id}`}>link</a>
-          </li>
+          </h1>
         ))}
       </ul>
-    </>
+    </main>
   );
 };
 export default BlogPage;
